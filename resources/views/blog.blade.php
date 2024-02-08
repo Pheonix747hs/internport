@@ -215,7 +215,7 @@
         </div>
     </section>
     <!--/ End Single News -->
-
+                        
     <!-- Footer Area -->
     <footer id="footer" class="footer ">
         <!-- Footer Top -->

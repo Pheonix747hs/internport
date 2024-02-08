@@ -30,6 +30,9 @@ Route::get('portfolio', function () {
     return view('portfolio');
 });
 
+Route::get('service', function () {
+    return view('service');
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
