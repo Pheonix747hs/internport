@@ -106,13 +106,13 @@
 								<div class="main-menu">
 									<nav class="navigation">
 										<ul class="nav menu">
-											<li class="active"><a href="/">Home</a>
+											<li class="active"><a href="/">Dashboard</a>
 											</li>
 											
 											<li><a href="service"> Service</a>
 												
 											</li>
-											<li><a href="blog">Blogs </a>
+											<li><a href="blog">Blogs</a>
 											</li>
 											<li><a href="contact">Contact Us</a></li>
 											<li><a href="portfolio">About Me</a>
@@ -125,6 +125,7 @@
 							<div class="col-lg-2 col-12">
 								<div class="get-quote">
 									<a href="#Appointment" class="btn">Book Appointment</a>
+									
 								</div>
 							</div>
 						</div>
@@ -637,7 +638,7 @@
 								
 							</ul>
 							<div class="table-bottom" style=" margin-top: auto;">
-								<a class="btn" href="#">Book Now</a>
+								<a class="btn" href="#Appointment">Book Now</a>
 							</div>
 							<!-- Table Bottom -->
 						</div>
@@ -664,7 +665,7 @@
             					<li><i class="icofont icofont-ui-check"></i>Comprehensive support throughout the acquisition process</li>
 							</ul>
 							<div class="table-bottom" style=" margin-top: auto;">
-								<a class="btn" href="#">Book now</a>
+								<a class="btn" href="#Appointment">Book now</a>
 							</div>
 						</div>
 					</div>
@@ -712,7 +713,7 @@
 						<!-- Single Blog -->
 						<div class="single-news">
 							<div class="news-head">
-								<img src="img/moneyexcel.png" alt="#" height="9vh">
+								<img src="img/moneyexcel.png" alt="#Appointment" height="9vh">
 								<br>
 							</div>
 							<div class="news-body" style="min-height: 9vh; overflow: hidden;">
@@ -924,7 +925,7 @@
 								<div class="row">
 									<div class="col-lg-6 col-md-6 col-12">
 										<ul>
-											<li><a href="/"><i class="fa fa-caret-right" aria-hidden="true"></i>Home</a></li>
+											<li><a href="/"><i class="fa fa-caret-right" aria-hidden="true"></i>Dashboard</a></li>
 											<li><a href="portfolio-details"><i class="fa fa-caret-right" aria-hidden="true"></i>About Us</a></li>
 											<li><a href="service"><i class="fa fa-caret-right" aria-hidden="true"></i>Services</a></li>
 											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Our Cases</a></li>	
