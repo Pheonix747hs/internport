@@ -1,0 +1,113 @@
+body {
+  background: #ececec;
+}
+
+h1 {
+  font-size: 32px;
+  margin-top: 30px;
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+}
+
+.blog-wrapper {
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.blog-wrapper .blog-card {
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+  max-width: 300px;
+  margin: 15px;
+  background: #fff;
+  border: 1px solid rgb(23, 106, 188);
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+.blog-wrapper .blog-card:hover {
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.1);
+}
+.blog-wrapper .blog-card .card-img {
+  position: relative;
+  text-align: center;
+  background: rgb(23, 106, 188);
+  overflow: hidden;
+}
+.blog-wrapper .blog-card .card-img img {
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+  max-height: 180px;
+  width: 100%;
+  border-bottom: 4px solid rgb(23, 106, 188);
+  object-fit: cover; /* Ensure images maintain aspect ratio and fill the container */
+}
+.blog-wrapper .blog-card .card-img:before {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  margin-left: -10px;
+  width: 0;
+  height: 0;
+  border-top: solid 10px rgb(23, 106, 188);
+  border-left: solid 10px transparent;
+  border-right: solid 10px transparent;
+}
+.blog-wrapper .blog-card .card-img h1 {
+  position: absolute;
+  margin: 0;
+  font-size: 42px;
+  bottom: 15px;
+  width: 100%;
+  color: #fff;
+  font-family: "Slabo 27px", serif;
+}
+.blog-wrapper .blog-card .card-details {
+  margin-top: 30px;
+  font-family: "Roboto", sans-serif;
+  color: #3C3C3C;
+  flex-grow: 1; /* Allow the details section to grow and take available space */
+}
+.blog-wrapper .blog-card .card-details span {
+  padding: 0 30px;
+}
+.blog-wrapper .blog-card .card-details span i {
+  margin-right: 5px;
+}
+
+.blog-wrapper .blog-card .card-text {
+  padding: 30px 15px;
+  font-family: "Roboto", sans-serif;
+  line-height: 22px;
+  overflow: hidden;
+  max-height: 15vh; /* Limit to 3 lines (22px * 3) */
+  text-overflow: ellipsis; /* Add ellipsis (...) for overflow */
+  flex-grow: 0; /* Allow the text section to grow and take available space */
+}
+
+.blog-wrapper .blog-card .read-more {
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+  display: inline-block;
+  width: auto;
+  text-align: center;
+  text-transform: uppercase;
+  background: rgb(23, 106, 188);
+  color: #fff;
+  padding: 15px;
+  margin-top: auto; /* Align at the bottom of the card */
+  margin-bottom: 15px; /* Add some margin */
+  margin-left: 75px;
+  margin-right: 75px;
+  font-family: "Oswald", sans-serif;
+}
+.blog-wrapper .blog-card .read-more:hover {
+  background: rgb(13, 62, 111);
+}
