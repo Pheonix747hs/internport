@@ -181,39 +181,61 @@
     <section class="text-gray-600 body-font overflow-hidden">
         <div class="container px-5 py-24 mx-auto">
             <div class="-my-8 divide-y-2 divide-gray-100">
-
+                @foreach ($posts as $post)
                 <div class="py-8 flex flex-wrap md:flex-nowrap">
-                    <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
-                        <span class="font-semibold title-font text-gray-700">CATEGORY</span>
-                        <span class="mt-1 text-gray-500 text-sm">12 Jun 2019</span>
+                    <div class=" md:mb-0 mb-6 flex-shrink-0 flex flex-col">
+                        <span class="font-semibold title-font text-gray-700">{{ $post->title }}</span>
+                        <span class="mt-1 text-gray-500 text-sm">{{ $post->date }}</span>
                     </div>
                     <div class="md:flex-grow">
-                        <h2 class="text-2xl font-medium text-gray-900 title-font mb-2">Meditation bushwick direct trade
-                            taxidermy shaman</h2>
-                        <p class="leading-relaxed">Glossier echo park pug, church-key sartorial biodiesel vexillologist
-                            pop-up snackwave ramps cornhole. Marfa 3 wolf moon party messenger bag selfies, poke
-                            vaporware kombucha lumbersexual pork belly polaroid hoodie portland craft beer.</p>
+                        <h2 class="text-2xl font-medium text-gray-900 title-font mb-2">{{ $post->title }}</h2>
+                        <p class="leading-relaxed">{{ $post->description }}</p>
                         
                     </div>
                 </div>
-
-
-                <div class="py-8 flex flex-wrap md:flex-nowrap">
-                    <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
-                        <span class="font-semibold title-font text-gray-700">CATEGORY</span>
-                        <span class="text-sm text-gray-500">12 Jun 2019</span>
-                    </div>
-                    <div class="md:flex-grow">
-                        <h2 class="text-2xl font-medium text-gray-900 title-font mb-2">Woke master cleanse drinking
-                            vinegar salvia</h2>
-                        <p class="leading-relaxed">Glossier echo park pug, church-key sartorial biodiesel vexillologist
-                            pop-up snackwave ramps cornhole. Marfa 3 wolf moon party messenger bag selfies, poke
-                            vaporware kombucha lumbersexual pork belly polaroid hoodie portland craft beer.</p>
-                    </div>
-                </div>
+                @endforeach 
             </div>
         </div>
     </section>
+
+
+    @auth
+    <section class="text-gray-600 body-font overflow-hidden">
+        <section class="mt-20 d-flex justify-center">
+            <h2>Add New Blog Post</h2>
+            <form method="POST" action="{{ route('blog.create') }}">
+                @csrf
+                <div class="mb-4">
+                    <label for="title" class="text-xl text-gray-600">Title <span class="text-red-500">*</span></label>
+                    <input type="text" id="title" name="title" class="border-2 border-gray-300 p-2 w-full @error('title') is-invalid @enderror" value="{{ old('title') }}">
+                    @error('title')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+                </div>
+                <div class="mb-4">
+                    <label for="description" class="text-xl text-gray-600">Description</label>
+                    <input type="text" id="description" name="description" class="border-2 border-gray-300 p-2 w-full" value="{{ old('description') }}">
+                </div>
+                <button type="submit" class="p-3 bg-blue-500 text-white hover:bg-blue-400">Submit</button>
+            </form>
+        </section>
+    </section>
+    @endauth
+    
+    
+
+
+
+    @if (session()->has('success'))
+    <div class="alert alert-success">
+        {{ session()->get('success') }}
+    </div>
+    @endif
+
+
+
     <!--/ End Single News -->
                         
     <!-- Footer Area -->

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\BlogController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,9 +19,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('blog', function () {
-    return view('blog');
-});
+Route::get('/blog', [BlogController::class, 'blog'])->name('blog');
+
+Route::post('/blog/create', [BlogController::class, 'store'])->name('blog.create');
+
 
 Route::get('contact', function () {
     return view('contact');
@@ -30,8 +32,8 @@ Route::get('portfolio', function () {
     return view('portfolio');
 });
 
-Route::get('service', function () {
-    return view('service');
+Route::get('portfolio', function () {
+    return view('portfolio');
 });
 
 Route::get('/dashboard', function () {
