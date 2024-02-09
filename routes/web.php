@@ -23,6 +23,9 @@ Route::get('/blog', [BlogController::class, 'blog'])->name('blog');
 
 Route::post('/blog/create', [BlogController::class, 'store'])->name('blog.create');
 
+Route::get('service', function () {
+    return view('service');
+});
 
 Route::get('contact', function () {
     return view('contact');
