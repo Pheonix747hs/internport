@@ -33,6 +33,7 @@ Brief description of the project.
    cp .env.example .env
    php artisan key:generate
    ```
+   [in the newly created .env file update the mysql ip address and credentials]
 
 5. Create a database and update the `.env` file with database credentials
 
@@ -45,8 +46,12 @@ Brief description of the project.
    ```
    php artisan serve
    ```
+   [make sure you have your sql server up and running to access blog page]
 
 8. Visit `http://localhost:8000` in your web browser
+
+9. once you have created your main account delete the if-statement which links to the register page in the 
+   blog.blade.php file to prevent guests from creating accounts 
 
 ## Deployment
 
