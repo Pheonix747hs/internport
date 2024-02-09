@@ -48,6 +48,11 @@ Version:	1.1
 /*=============================
 	Global CSS 
 ===============================*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body{
     font-family: 'Poppins', sans-serif;
 	font-weight: 400;
