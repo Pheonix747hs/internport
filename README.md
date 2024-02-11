@@ -52,7 +52,7 @@ Brief description of the project.
 8. Visit `http://localhost:8000` in your web browser
 
 9. once you have created your main account delete the if-statement which links to the register page in the 
-   blog.blade.php file to prevent guests from creating accounts 
+   resources/views/blog.blade.php file to prevent guests from creating accounts 
 
 ## Deployment
 
