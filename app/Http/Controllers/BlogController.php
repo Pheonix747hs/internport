@@ -18,6 +18,7 @@ class BlogController extends Controller
     public function store()
     {
         $newblog = new BlogPost([
+            'header' => request()->get('header'),
             'title' => request()->get('title'),
             'description' => request()->get('description'),
         ]);

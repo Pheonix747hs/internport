@@ -10,7 +10,8 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
                     {{ __("You're logged in!") }}
-                    <button><a href="blog">goto-blog</a></button>
+                    <br>
+                    <button style="background-color:rgb(84, 84, 214);padding:8px;border-radius:15px "><a href="blog" style="color: white"><b>goto-blog</b></a></button>
                 </div>
             </div>
         </div>

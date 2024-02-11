@@ -42,9 +42,10 @@ Brief description of the project.
    php artisan migrate --seed
    ```
 
-7. Start the development server
+7. Start the development server and npm hotloader
    ```
    php artisan serve
+   npm run dev
    ```
    [make sure you have your sql server up and running to access blog page]
 

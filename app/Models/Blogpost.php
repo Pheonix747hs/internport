@@ -11,5 +11,5 @@ class Blogpost extends Model
      protected $table = 'blog_posts';
 
      // Specify fillable fields if you want to restrict mass assignment
-     protected $fillable = ['title', 'date', 'description'];
+     protected $fillable = ['title','header', 'date', 'description'];
 }

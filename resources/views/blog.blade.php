@@ -190,7 +190,7 @@
                 @foreach ($posts as $post)
                     <div class="py-8 flex flex-wrap md:flex-nowrap">
                         <div class=" md:mb-0 mb-6 flex-shrink-0 flex flex-col">
-                            <span class="font-semibold title-font text-gray-700">{{ $post->title }}</span>
+                            <span class="font-semibold title-font text-gray-700">{{ $post->header }}</span>
                             <span class="mt-1 text-gray-500 text-sm">{{ $post->date }}</span>
                         </div>
                         <div class="md:flex-grow">
@@ -206,34 +206,39 @@
 
 
     @auth
-        <section class="text-gray-600 body-font overflow-hidden">
-            <section class="mt-20 d-flex justify-center">
-
-                <form method="POST" action="{{ route('blog.create') }}">
-                    <h2>Add New Blog Post</h2>
-                    @csrf
-                    <div class="mb-4">
-                        <label for="title" class="text-xl text-gray-600">Title <span
-                                class="text-red-500">*</span></label>
-                        <input type="text" id="title" name="title"
-                            class="border-2 border-gray-300 p-2 w-full @error('title') is-invalid @enderror"
-                            value="{{ old('title') }}" required>
-                        @error('title')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
-
-                    </div>
-                    <div class="mb-4">
-                        <label for="description" class="text-xl text-gray-600">Description</label>
-                        <textarea type="textarea" id="description" name="description" class="border-2 border-gray-300 p-2 w-full"
-                            value="{{ old('description') }}"></textarea>
-                    </div>
-                    <button type="submit" class="p-3 bg-blue-500 text-white hover:bg-blue-400">Submit</button>
-                </form>
-            </section>
+    <section class="text-gray-600 body-font overflow-hidden mb-9" style="display: flex; justify-content: center; align-items: center; min-height: 40vh;mb-12">
+        <section style="display: grid; grid-template-columns: repeat(auto-fit, minmax(100%, 1fr)); gap: 1rem;max-width: 1200px;">
+          <h2>Add New Blog Post</h2>
+          <form method="POST" action="{{ route('blog.create') }}">
+            @csrf
+            <div class="mb-4" style="grid-column: 1 / span 2;">
+              <label for="header" class="text-xl text-gray-600">Header <span class="text-red-500">*</span></label>
+              <input type="text" id="header" name="header" class="border-2 border-gray-300 p-2 w-full @error('header') is-invalid @enderror" value="{{ old('header') }}" required>
+              @error('header')
+                <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+                </span>
+              @enderror
+            </div>
+            <div class="mb-4" style="grid-column: 1 / span 2;">
+              <label for="title" class="text-xl text-gray-600">Title <span class="text-red-500">*</span></label>
+              <input type="text" id="title" name="title" class="border-2 border-gray-300 p-2 w-full @error('title') is-invalid @enderror" value="{{ old('title') }}" required>
+              @error('title')
+                <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+                </span>
+              @enderror
+            </div>
+            <div class="mb-4" style="grid-column: 1 / span 2;">
+              <label for="description" class="text-xl text-gray-600">Description</label>
+              <textarea type="textarea" id="description" name="description" class="border-2 border-gray-300 p-2 w-full" value="{{ old('description') }}"></textarea>
+            </div>
+            <button type="submit" class="p-3 bg-blue-500 text-white hover:bg-blue-400">Submit</button>
+          </form>
         </section>
+      </section>
+      
+    
     @endauth
 
 

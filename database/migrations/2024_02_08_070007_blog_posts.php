@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('blog_posts', function (Blueprint $table) {
             $table->id();
             $table->string('title', 255)->notNullable();
+            $table->string('header', 255)->notNullable();
             $table->dateTime('date')->useCurrent();
             $table->text('description')->notNullable();
             $table->timestamps();
